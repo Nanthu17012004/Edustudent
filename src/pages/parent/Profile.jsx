@@ -1,0 +1,4 @@
+import React from "react";
+import Avatar from "../../components/common/Avatar";
+import Button from "../../components/common/Button";
+export default function Profile() { return <div><div className="page-heading"><span className="eyebrow">Account</span><h1>Profile</h1><p>Manage your parent account information.</p></div><div className="profile-edit"><div className="profile-header"><Avatar name="Parent User" size="xl"/><div><h2>Parent User</h2><p>parent@example.com</p></div></div><div className="form-grid"><label>Full name<input defaultValue="Parent User"/></label><label>Email<input defaultValue="parent@example.com"/></label><label>Phone<input defaultValue="+91 98765 43210"/></label><label>Relationship<select defaultValue="Parent"><option>Parent</option><option>Guardian</option></select></label></div><Button>Save profile</Button></div></div>; }

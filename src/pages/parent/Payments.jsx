@@ -1,0 +1,5 @@
+import React from "react";
+import { Download } from "lucide-react";
+import { payments } from "../../data/payments";
+import { formatCurrency } from "../../utils/helpers";
+export default function Payments() { return <div><div className="page-heading"><span className="eyebrow">Finance</span><h1>Payments</h1><p>View fee history and outstanding payments.</p></div><div className="table-card"><table><thead><tr><th>Payment</th><th>Date</th><th>Amount</th><th>Method</th><th>Status</th><th/></tr></thead><tbody>{payments.map(p=><tr key={p.id}><td><strong>{p.title}</strong></td><td>{p.date}</td><td>{formatCurrency(p.amount)}</td><td>{p.method}</td><td><span className={`status-pill ${p.status.toLowerCase()}`}>{p.status}</span></td><td><button className="icon-btn"><Download size={17}/></button></td></tr>)}</tbody></table></div></div>; }
